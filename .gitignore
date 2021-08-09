@@ -1,3 +1,7 @@
+# User stuff
+build
+.ccls-*
+
 # Prerequisites
 *.d
 
