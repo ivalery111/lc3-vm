@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdio.h>
 
 /* ==== MEMORY ==== */
 static uint16_t memory[UINT16_MAX];
@@ -48,4 +49,25 @@ enum {
 	FL_NEG = (1 << 2), /* Negetive */
 };
 /*****************************/
+
+/* ==== PROTOTYPES ==== */
+static void print_usage(const char* name);
+/************************/
+
+static void print_usage(const char* name) {
+    fprintf(stdout,
+	    "Usage:\n"
+	    " %1$s [image]"
+	    "",
+	    name);
+}
+
+int main(int argc, char** argv) {
+    if (argc < 3) {
+	print_usage(argv[0]);
+	return (-1);
+    }
+
+    return 0;
+}
 
